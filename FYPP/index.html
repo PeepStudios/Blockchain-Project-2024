@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Interoperability</title>
+</head>
+<body>
+    <h1>Hospital Interoperability</h1>
+    <button onclick="registerHospital()">Register Hospital</button>
+    <br><br>
+    <form onsubmit="addPatientData(event)">
+        <label for="name">Patient Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="dataHash">Data Hash:</label>
+        <input type="text" id="dataHash" name="dataHash">
+        <button type="submit">Add Patient Data</button>
+    </form>
+    <br>
+    <button onclick="requestPatientData()">Request Patient Data</button>
+    <br><br>
+    <form onsubmit="approveAccess(event)">
+        <label for="requester">Requester Address:</label>
+        <input type="text" id="requester" name="requester">
+        <button type="submit">Approve Access</button>
+    </form>
+    <br>
+    <form onsubmit="denyAccess(event)">
+        <label for="requester">Requester Address:</label>
+        <input type="text" id="requester" name="requester">
+        <button type="submit">Deny Access</button>
+    </form>
+    <!-- Include web3.js from a CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <!-- Include app.js script -->
+    <script src="app.js"></script>
+</body>
+</html>
